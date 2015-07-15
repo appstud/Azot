@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Azot"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Azot is a mobile analysis SDK that runs directly inside phones or tablets."
 
   s.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "http://appstud.com/"
+  s.homepage     = "http://hiveinmyapp.com"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/appstud/Azot.git", :tag => "v0.0.1" }
+  s.source       = { :git => "https://github.com/appstud/Azot.git", :tag => "v0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

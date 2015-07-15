@@ -1,5 +1,5 @@
 //
-//  ASTracking.h
+//  AZTracking.h
 //  Appstrack
 //
 //  Created by Thomas Carayol on 16/01/15.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ASTracking : NSObject
+@interface AZTracking : NSObject
 
-#define AS_LOG(__FORMAT__, ...) ASNSLog((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define AZLOG(__FORMAT__, ...) AZLog((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 //START SESSION
 + (void)startTracking:(NSString*)userToken;
@@ -26,6 +26,6 @@
 + (void)sendMessage: (NSString*)message;
 
 //TRACK LOG
-OBJC_EXTERN void ASNSLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
+OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
 @end
