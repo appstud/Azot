@@ -29,12 +29,13 @@ pod 'Azot'
 
 To start Azot basic analysis add the following code in your appDelegate :
 
-#import <Azot/AZTracking.h>
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        #import <Azot/AZTracking.h>
+        
+        - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         [AZTracking startTracking:@"AZOT_APP_TOKEN"];
+        
         return YES;
-}
+        }
 
 
 Methods
