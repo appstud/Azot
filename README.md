@@ -42,7 +42,7 @@ Methods
 
 Azot has the following methods:
 
-        + (void)startTracking:(NSString*)azotAppToken;
+    + (void)startTracking:(NSString*)azotAppToken;
 
 Start analysis in the app. Call it in your app delegate.
 
