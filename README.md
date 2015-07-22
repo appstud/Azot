@@ -21,10 +21,12 @@ Installation
 --------------
 
 To install Azot into your app, drag the Azot.framework into your project.
+
 Or
+
 Use CocoaPods using the line :
 
-pod 'Azot'
+        pod 'Azot'
 
 
 To start Azot basic analysis add the following code in your appDelegate :
