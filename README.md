@@ -37,7 +37,14 @@ To start Azot basic analysis add the following code in your appDelegate :
          [AZTracking startTracking:@"AZOT_APP_TOKEN"];
          return YES;
     }
+    
+Dependencies
+--------------
 
+To run azot you also need to install:
+
+    Realm
+    AFNetworking
 
 Methods
 --------------
