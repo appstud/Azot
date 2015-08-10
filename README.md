@@ -51,26 +51,56 @@ Methods
 
 Azot has the following methods:
 
-    + (void)startTracking:(NSString*)azotAppToken;
+start:
 
-Start analysis in the app. Call it in your app delegate.
+    + (void)start:(NSString*)azotAppToken;
 
-    + (void)trackPage: (NSString*)pageId;
+    Start analysis in the app. Call it in your app delegate.
 
-Start analysis of a page. Call it in your controller viewDidAppear. Tips: Use this function to analyse a "page", understood as what the user can see.
+start:withVideo:andConfidentiality: 
 
-    + (void)stopTrackPage: (NSString*)pageId;
+    + (void)start:(NSString *)azotAppToken withVideo:(bool)video andConfidentiality:(AZConfidentiality)confidentialityLevel
 
-Stop a page analysis. Call it in your controller viewDidDisapear.
+    Start analysis in the app. Call it in your app delegate.
 
-    + (void)trackEvent: (NSString*)eventId;
+startPage: 
 
-Track events you care about in your app.
+    + (void)startPage:(NSString *)pageId
 
-    + (void)sendMessage: (NSString*)message;
+    Start analysis of a page. Call it in your controller viewDidAppear. Tips: Use this function to analyse a “page”, understood as what the user can see.
 
-This function is used to collect user feedbacks. This feedbacks will saved in the session report.
+stopPage: 
+
+    + (void)stopPage:(NSString *)pageId
+
+    Stop a page analysis. Call it in your controller viewDidDisapear.
+
+event: 
+
+    + (void)event:(NSString *)eventId
+
+    Track events you care about in your app.
+    
+message:
+
+    + (void)message: (NSString*)message;
+
+    This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
+
+AZLog:
 
     OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
-This function collects your logs if a session ends on a crash, just use AZLog instead of NSLog.
+    This function collects your logs if a session ends on a crash, just use AZLog instead of NSLog.
+
+confidentiality:
+
+    + (void)confidentiality:(AZConfidentiality)confidentiality
+    
+    Allow you to set the confidentiality level of both video and screenshots.
+    
+video: 
+
+    + (void)video:(bool)video
+
+    Allow you not to use video.
