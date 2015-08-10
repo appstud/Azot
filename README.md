@@ -55,52 +55,52 @@ start:
 
     + (void)start:(NSString*)azotAppToken;
 
-    Start analysis in the app. Call it in your app delegate.
+Start analysis in the app. Call it in your app delegate.
 
 start:withVideo:andConfidentiality: 
 
     + (void)start:(NSString *)azotAppToken withVideo:(bool)video andConfidentiality:(AZConfidentiality)confidentialityLevel
 
-    Start analysis in the app. Call it in your app delegate.
+Start analysis in the app. Call it in your app delegate.
 
 startPage: 
 
     + (void)startPage:(NSString *)pageId
 
-    Start analysis of a page. Call it in your controller viewDidAppear. Tips: Use this function to analyse a “page”, understood as what the user can see.
+Start analysis of a page. Call it in your controller viewDidAppear. Tips: Use this function to analyse a “page”, understood as what the user can see.
 
 stopPage: 
 
     + (void)stopPage:(NSString *)pageId
 
-    Stop a page analysis. Call it in your controller viewDidDisapear.
+Stop a page analysis. Call it in your controller viewDidDisapear.
 
 event: 
 
     + (void)event:(NSString *)eventId
 
-    Track events you care about in your app.
+Track events you care about in your app.
     
 message:
 
     + (void)message: (NSString*)message;
 
-    This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
+This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
 
 AZLog:
 
     OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
-    This function collects your logs if a session ends on a crash, just use AZLog instead of NSLog.
+This function collects your logs if a session ends on a crash, just use AZLog instead of NSLog.
 
 confidentiality:
 
     + (void)confidentiality:(AZConfidentiality)confidentiality
     
-    Allow you to set the confidentiality level of both video and screenshots.
+Allow you to set the confidentiality level of both video and screenshots.
     
 video: 
 
     + (void)video:(bool)video
 
-    Allow you not to use video.
+Allow you not to use video.
