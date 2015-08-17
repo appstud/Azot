@@ -2,7 +2,6 @@
 Azot is a mobile analysis SDK that runs directly inside phones or tablets. This repository holds the source code for the iOS version of Azot, for Objective-C.
 
 ##Supported OS & SDK Versions
------------------------------
 
 * Supported build target - iOS 8.3
 * Earliest supported deployment target - iOS 8.3
@@ -12,13 +11,11 @@ Azot is a mobile analysis SDK that runs directly inside phones or tablets. This 
 
 
 ##Thread Safety
---------------
 
 Azot uses threading internally to avoid blocking the UI, but none of the Azot external interfaces are thread safe and you should not call any methods on Azot except from the main thread.
 
 
-#Installation
---------------
+##Installation
 
 To install Azot into your app, drag the Azot.framework into your project.
 
@@ -39,7 +36,6 @@ To start Azot basic analysis add the following code in your appDelegate :
     }
     
 ##Dependencies
---------------
 
 To run azot you also need to install:
 
@@ -47,7 +43,6 @@ To run azot you also need to install:
     AFNetworking
 
 ##Methods
---------------
 
 Azot has the following methods:
 
