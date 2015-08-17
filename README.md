@@ -57,7 +57,7 @@ The default confidentiality level is medium.
 
 Azot has the following methods:
 
-start:
+###start:
 
     + (void)start:(NSString*)azotAppToken;
 
