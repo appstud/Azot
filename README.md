@@ -8,7 +8,7 @@ Azot is a mobile analysis SDK that runs directly inside phones or tablets. This 
 * Earliest supported deployment target - iOS 8.3
 * Earliest compatible deployment target - iOS 7.1
 * 
-*NOTE*: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility and may require tweaking or bug fixes to run correctly.
+**NOTE**: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility and may require tweaking or bug fixes to run correctly.
 
 
 ##Thread Safety
@@ -17,12 +17,12 @@ Azot is a mobile analysis SDK that runs directly inside phones or tablets. This 
 Azot uses threading internally to avoid blocking the UI, but none of the Azot external interfaces are thread safe and you should not call any methods on Azot except from the main thread.
 
 
-Installation
+#Installation
 --------------
 
 To install Azot into your app, drag the Azot.framework into your project.
 
-Or
+**Or**
 
 Use CocoaPods using the line :
 
@@ -38,7 +38,7 @@ To start Azot basic analysis add the following code in your appDelegate :
          return YES;
     }
     
-Dependencies
+##Dependencies
 --------------
 
 To run azot you also need to install:
@@ -46,7 +46,7 @@ To run azot you also need to install:
     Realm
     AFNetworking
 
-Methods
+##Methods
 --------------
 
 Azot has the following methods:
