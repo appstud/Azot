@@ -14,7 +14,6 @@ Azot is a mobile analysis SDK that runs directly inside phones or tablets. This 
 
 Azot uses threading internally to avoid blocking the UI, but none of the Azot external interfaces are thread safe and you should not call any methods on Azot except from the main thread.
 
-
 ##Installation
 
 To install Azot into your app, drag the Azot.framework into your project.
@@ -41,6 +40,16 @@ To run azot you also need to install:
 
     Realm
     AFNetworking
+
+##Confidentiality
+
+The confidentiality level of screenshots and vidéos have three levels:
+
+Confidentiality level   |   Hidded elements 
+------------------------------------------- 
+AZConfidentialityLow    |   Nothing 
+AZConfidentialityMedium |   Text fields
+AZConfidentialityHigh   |   Text fiels + Images + keybords + labels
 
 ##Methods
 
