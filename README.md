@@ -46,7 +46,7 @@ To run azot you also need to install:
 The confidentiality level of screenshots and vidéos have three levels:
 
 Confidentiality level   |   Hidded elements 
-------------------------------------------- 
+------------------------|--------------------
 AZConfidentialityLow    |   Nothing 
 AZConfidentialityMedium |   Text fields
 AZConfidentialityHigh   |   Text fiels + Images + keybords + labels
