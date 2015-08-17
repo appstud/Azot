@@ -63,49 +63,49 @@ Azot has the following methods:
 
 Start analysis in the app with video and medium confidentiality level. Call it in your app delegate.
 
-start:withVideo:andConfidentiality: 
+####start:withVideo:andConfidentiality: 
 
     + (void)start:(NSString *)azotAppToken withVideo:(bool)video andConfidentiality:(AZConfidentiality)confidentialityLevel
 
 Start analysis in the app. Call it in your app delegate.
 
-startPage: 
+####startPage: 
 
     + (void)startPage:(NSString *)pageId
 
 Start analysis of a page. Call it in your controller viewDidAppear. Tips: Use this function to analyse a “page”, understood as what the user can see.
 
-stopPage: 
+####stopPage: 
 
     + (void)stopPage:(NSString *)pageId
 
 Stop a page analysis. Call it in your controller viewDidDisapear.
 
-event: 
+####event: 
 
     + (void)event:(NSString *)eventId
 
 Track events you care about in your app.
     
-message:
+####message:
 
     + (void)message: (NSString*)message;
 
 This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
 
-AZLog:
+####AZLog:
 
     OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
 This function collects your logs if a session ends on a crash, just use AZLog instead of NSLog.
 
-confidentiality:
+####confidentiality:
 
     + (void)confidentiality:(AZConfidentiality)confidentiality
     
 Allow you to set the confidentiality level of both video and screenshots.
     
-video: 
+####video: 
 
     + (void)video:(bool)video
 
