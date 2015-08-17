@@ -49,7 +49,7 @@ Confidentiality level   |   Hidden elements
 ------------------------|--------------------
 AZConfidentialityLow    |   Nothing 
 AZConfidentialityMedium |   UITextFields
-AZConfidentialityHigh   |   UITextFields + UIImages + keybords + UILabels
+AZConfidentialityHigh   |   UITextFields + UIImages + UILabels
 
 The default confidentiality level is medium.
 
