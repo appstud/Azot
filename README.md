@@ -51,6 +51,8 @@ AZConfidentialityLow    |   Nothing
 AZConfidentialityMedium |   UITextFields
 AZConfidentialityHigh   |   UITextFields + UIImages + keybords + UILabels
 
+The default confidentiality level is medium.
+
 ##Methods
 
 Azot has the following methods:
@@ -59,7 +61,7 @@ start:
 
     + (void)start:(NSString*)azotAppToken;
 
-Start analysis in the app. Call it in your app delegate.
+Start analysis in the app with video and medium confidentiality level. Call it in your app delegate.
 
 start:withVideo:andConfidentiality: 
 
