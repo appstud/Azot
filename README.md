@@ -1,17 +1,17 @@
 # Azot
 Azot is a mobile analysis SDK that runs directly inside phones or tablets. This repository holds the source code for the iOS version of Azot, for Objective-C.
 
-Supported OS & SDK Versions
+##Supported OS & SDK Versions
 -----------------------------
 
 * Supported build target - iOS 8.3
 * Earliest supported deployment target - iOS 8.3
 * Earliest compatible deployment target - iOS 7.1
 * 
-NOTE: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility and may require tweaking or bug fixes to run correctly.
+*NOTE*: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility and may require tweaking or bug fixes to run correctly.
 
 
-Thread Safety
+##Thread Safety
 --------------
 
 Azot uses threading internally to avoid blocking the UI, but none of the Azot external interfaces are thread safe and you should not call any methods on Azot except from the main thread.
