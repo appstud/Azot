@@ -1,5 +1,5 @@
 # Azot
-Azot is a mobile analysis SDK that runs directly inside phones or tablets. This repository holds the source code for the iOS version of Azot, for Objective-C.
+Azot is a mobile analysis SDK that runs directly inside phones or tablets. This repository holds the framework for the iOS version of Azot, for Objective-C.
 
 ##Supported OS & SDK Versions
 
@@ -45,11 +45,11 @@ To run azot you also need to install:
 
 The confidentiality level of screenshots and vidéos have three levels:
 
-Confidentiality level   |   Hidded elements 
+Confidentiality level   |   Hidden elements 
 ------------------------|--------------------
 AZConfidentialityLow    |   Nothing 
-AZConfidentialityMedium |   Text fields
-AZConfidentialityHigh   |   Text fiels + Images + keybords + labels
+AZConfidentialityMedium |   UITextFields
+AZConfidentialityHigh   |   UITextFields + UIImages + keybords + UILabels
 
 ##Methods
 
