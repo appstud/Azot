@@ -34,6 +34,12 @@ To start Azot basic analysis add the following code in your appDelegate :
          return YES;
     }
     
+##Important notes
+
+The SDK do not generate videos on simulator.
+
+If you are running from XCode do not stop the app, press on the "home" button in order for data to be uploaded.
+    
 ##Dependencies
 
 To run azot you also need to install:
