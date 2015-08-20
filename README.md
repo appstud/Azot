@@ -27,10 +27,10 @@ Use CocoaPods using the line :
 
 To start Azot basic analysis add the following code in your appDelegate :
 
-    #import <Azot/AZTracking.h>
+    #import <Azot/Azot.h>
         
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-         [AZTracking startTracking:@"AZOT_APP_TOKEN"];
+         [Azot start:@"AZOT_APP_TOKEN"];
          return YES;
     }
     
