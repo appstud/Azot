@@ -32,7 +32,7 @@ typedef NS_ENUM(int, AZConfidentiality) {
  *  @param confidentialityLevel define the confidentiality level of both screenshot and video.
  *  @return void
  */
-+ (void)start:(NSString*)azotAppToken withVideo:(bool)video andConfidentiality:(AZConfidentiality)confidentialityLevel;
++ (void)start:(NSString*)azotAppToken video:(bool)video autoTracking:(bool)tracking confidentiality:(AZConfidentiality)confidentialityLevel;
 
 /**
  *  Start analysis of a page. Call it in your controller viewDidAppear. Tips: Use this function to analyse a "page", understood as what the user can see.
