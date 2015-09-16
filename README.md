@@ -69,9 +69,9 @@ Azot has the following methods:
 
 Start analysis in the app with video and medium confidentiality level. Call it in your app delegate.
 
-####start:withVideo:andConfidentiality: 
+####start:video:autoTracking:confidentiality: 
 
-    + (void)start:(NSString *)azotAppToken withVideo:(bool)video andConfidentiality:(AZConfidentiality)confidentialityLevel
+    + (void)start:(NSString*)azotAppToken video:(bool)video autoTracking:(bool)tracking confidentiality:(AZConfidentiality)confidentialityLevel;
 
 Start analysis in the app. Call it in your app delegate.
 
