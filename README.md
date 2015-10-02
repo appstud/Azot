@@ -20,12 +20,14 @@ To install Azot into your app, drag the Azot.framework into your project.
 
 **Or**
 
-Use CocoaPods using the line :
+Use CocoaPods by adding this to your podfile :
 
     pod 'Azot'
 
 
 To start Azot basic analysis add the following code in your appDelegate :
+
+#####Objective C
 
     #import <Azot/Azot.h>
         
@@ -33,6 +35,15 @@ To start Azot basic analysis add the following code in your appDelegate :
          [Azot start:@"AZOT_APP_TOKEN"];
          return YES;
     }
+    
+#####Swift
+
+Import \<Azot/Azot.h\> in your bridging header.
+
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+       Azot.start("AZOT_APP_TOKEN")
+       return true
+       }
     
 ##Important notes
 
@@ -68,12 +79,6 @@ Azot has the following methods:
     + (void)start:(NSString*)azotAppToken;
 
 Start analysis in the app with video and medium confidentiality level. Call it in your app delegate.
-
-####start:video:autoTracking:confidentiality: 
-
-    + (void)start:(NSString*)azotAppToken video:(bool)video autoTracking:(bool)tracking confidentiality:(AZConfidentiality)confidentialityLevel;
-
-Start analysis in the app. Call it in your app delegate.
 
 ####startPage: 
 
