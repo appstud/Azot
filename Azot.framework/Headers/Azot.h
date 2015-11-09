@@ -75,7 +75,7 @@ OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 @property   BOOL                        autoTracking;
 @property   BOOL                        gps;
 @property   BOOL                        wifiOnly;
-@property   BOOL                        debugOnly;
+@property   BOOL                        onDebug;
 @property   ASVideoParams*              video;
 
 
