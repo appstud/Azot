@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Azot"
-  s.version      = "0.0.26"
+  s.version      = "0.0.27"
   s.summary      = "Azot is a mobile analysis SDK that runs directly inside phones or tablets."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/appstud/Azot.git", :tag => "0.0.26" }
+  s.source       = { :git => "https://github.com/appstud/Azot.git", :tag => "0.0.27" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,7 +132,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "AFNetworking"
-  s.dependency "Realm"
 
 end

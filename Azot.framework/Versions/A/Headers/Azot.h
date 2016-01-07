@@ -12,7 +12,7 @@
 
 @interface Azot : NSObject
 
-#define AZLOG(__FORMAT__, ...) AZLog((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define AZLog(__FORMAT__, ...) azotLogger((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 typedef NS_ENUM(int, AZConfidentialityLevel) {
     AZConfidentialityLevelLow = 0,
@@ -66,7 +66,7 @@ typedef NS_ENUM(int, AZConfidentialityLevel) {
  *  @param format string used to define the log format, same usage as NSLog.
  *  @return void
  */
-OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
+void azotLogger(NSString *format, ...);
 
 /**
  *  ENUM used to define the current confidentiality
