@@ -50,13 +50,6 @@ Import \<Azot/Azot.h\> in your bridging header.
 The SDK do not generate videos on simulator.
 
 If you are running from XCode do not stop the app, press on the "home" button in order for data to be uploaded.
-    
-##Dependencies
-
-To run azot you also need to install:
-
-    Realm
-    AFNetworking
 
 ##Confidentiality
 
@@ -65,7 +58,7 @@ The confidentiality level of screenshots and vidéos have three levels:
 Confidentiality level   |   Hidden elements 
 ------------------------|--------------------
 AZConfidentialityLow    |   Nothing 
-AZConfidentialityMedium |   UITextFields
+AZConfidentialityMedium |   UITextFields + AVCaptureVideoPreviewLayer
 AZConfidentialityHigh   |   UITextFields + UIImages + UILabels
 
 The default confidentiality level is medium.
@@ -109,15 +102,3 @@ This function is used to collect user feedbacks. The feedbacks will be saved in 
     OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
 This function collects your logs if a session ends on a crash, just use AZLog instead of NSLog.
-
-####confidentiality:
-
-    + (void)confidentiality:(AZConfidentiality)confidentiality
-    
-Allow you to set the confidentiality level of both video and screenshots.
-    
-####video: 
-
-    + (void)video:(bool)video
-
-Allow you not to use video.
