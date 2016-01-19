@@ -68,6 +68,7 @@ typedef NS_ENUM(int, AZConfidentialityLevel) {
  */
 void azotLogger(NSString *format, ...);
 
+
 /**
  *  ENUM used to define the current confidentiality
  */
@@ -79,5 +80,8 @@ void azotLogger(NSString *format, ...);
 @property   BOOL                        feedBack;
 @property   ASVideoParams*              video;
 
+@end
+
+@interface AzotSecure
 
 @end
