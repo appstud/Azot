@@ -111,6 +111,7 @@ This function prints and saves your logs, simply use AZLog instead of NSLog.
 You can acces sdk parameters through your dashboard on http://board.azot.io
 
 ###General Parameters
+___
 
 ####Use feedback
 Activate or desactivate the "shake for feedback" functionality.
@@ -134,6 +135,7 @@ If activated pages will be automatically tracked.
 Allows you to set a date range in which the SDK will be on.
 
 ###Video Parameters
+___
 
 ####Video recording
 Activate or desactivate the video.
