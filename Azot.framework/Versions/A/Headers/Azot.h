@@ -82,6 +82,8 @@ void azotLogger(NSString *format, ...);
 
 @end
 
-@interface AzotSecure
+@protocol AzotSecure
+
+bool isSecure();
 
 @end
