@@ -68,7 +68,7 @@ Import \<Azot/Azot.h\> in your bridging header.
 
 The SDK does not generate videos on simulator.
 
-If you are running from XCode do not stop the app, press the "home" button in order for data to be uploaded.
+If you are running from Xcode do not stop the app, press the "home" button in order for data to be uploaded.
 
 ##Confidentiality
 
