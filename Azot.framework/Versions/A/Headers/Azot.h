@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class ASVideoParams;
+@class ASFeedbackParam;
 
 @interface Azot : NSObject
 
@@ -55,11 +56,18 @@ typedef NS_ENUM(int, AZConfidentialityLevel) {
 + (void)event: (NSString*)eventId;
 
 /**
- *  Used to get feedbacks from the user.
- *  @param message is your user feedback message.
+ *  Used to show a feedback view from the user.
  *  @return void
  */
-+ (void)message: (NSString*)message;
++ (void)showFeedbackView;
+
+/**
+ *  Used to get feedbacks from the user.
+ *  @param message is your user feedback message.
+ *  @param category is the category of your feedback
+ *  @return void
+ */
++ (void)feedback: (NSString*)message forCategory:(NSString*) category;
 
 /**
  *  Allow you to get your logs if a session ends on a crash, just use AZLog instead of NSLog.
@@ -67,7 +75,6 @@ typedef NS_ENUM(int, AZConfidentialityLevel) {
  *  @return void
  */
 void azotLogger(NSString *format, ...);
-
 
 /**
  *  ENUM used to define the current confidentiality
@@ -77,8 +84,9 @@ void azotLogger(NSString *format, ...);
 @property   BOOL                        gps;
 @property   BOOL                        wifiOnly;
 @property   BOOL                        onDebug;
-@property   BOOL                        feedBack;
+//@property   BOOL                        feedBack;
 @property   ASVideoParams*              video;
+@property   ASFeedbackParam*            feedbackParams;
 
 @end
 
