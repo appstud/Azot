@@ -18,6 +18,25 @@ Azot uses threading internally to avoid blocking the UI, but none of the Azot ex
 
 To install Azot into your app, drag the Azot.framework into your project.
 
+Add those native dependencies to your project:
+
+- AddressBook.framework
+- AssetsLibrary.framework
+- CoreBluetooth.framework
+- CoreMedia.framework
+- CoreLocation.framework
+- SystemConfiguration.framework
+- AVFoundation.framework
+
+Then add the compile flags following those steps:
+
+1. In Xcode, choose View > Navigators > Show Project Navigator.
+2. Select your project under the PROJECT heading in the Project Navigator, then select the Build Settings tab.
+3. Scroll down to the Other Linker Flags build setting under the Linking collection, or type "Other Linker Flags" into the search bar.
+4. Set the value of the Other Linker Flags build setting to $(OTHER_LDFLAGS) -ObjC.
+
+
+
 **Or**
 
 Use CocoaPods by adding this to your podfile :
@@ -49,7 +68,7 @@ Import \<Azot/Azot.h\> in your bridging header.
 
 The SDK does not generate videos on simulator.
 
-If you are running from XCode do not stop the app, press the "home" button in order for data to be uploaded.
+If you are running from Xcode do not stop the app, press the "home" button in order for data to be uploaded.
 
 ##Confidentiality
 
