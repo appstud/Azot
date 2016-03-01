@@ -114,7 +114,7 @@ Track events you care about in your app.
     
 ####message:
 
-    + (void)message: (NSString*)message;
+    + (void)feedback:(NSString*)message forCategory:(NSString*)category;
 
 This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
 It is the one used in our feedback feature.
