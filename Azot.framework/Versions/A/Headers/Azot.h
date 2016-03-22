@@ -84,14 +84,8 @@ void azotLogger(NSString *format, ...);
 @property   BOOL                        gps;
 @property   BOOL                        wifiOnly;
 @property   BOOL                        onDebug;
-//@property   BOOL                        feedBack;
-@property   ASVideoParams*              video;
-@property   ASFeedbackParam*            feedbackParams;
 
-@end
-
-@protocol AzotSecure
-
-bool isSecure();
+@property (strong)  ASVideoParams*      video;
+@property (strong)  ASFeedbackParam*    feedbackParams;
 
 @end
