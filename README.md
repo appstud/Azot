@@ -5,7 +5,7 @@ Azot is a mobile analysis SDK that runs directly inside phones or tablets. This 
 
 * Supported build target - iOS 8.3
 * Earliest supported deployment target - iOS 9.2.1
-* Earliest compatible deployment target - iOS 7.1
+* Earliest compatible deployment target - iOS 7.0
 * 
 **NOTE**: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility and may require tweaking or bug fixes to run correctly.
 
