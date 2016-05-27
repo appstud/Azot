@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Azot"
-  s.version      = "0.3.13"
+  s.version      = "0.3.36"
   s.summary      = "Azot is a mobile analysis SDK that runs directly inside phones or tablets."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/appstud/Azot.git", :tag => "0.3.13" }
+  s.source       = { :git => "https://github.com/appstud/Azot.git", :tag => "0.3.36" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
