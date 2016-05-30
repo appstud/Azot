@@ -1,13 +1,20 @@
-# Azot
+<p align="center" >
+  <img src="https://board.azot.io/img/icons/logo_azot.svg" alt="Azot" title="Azot" width="300" height="300">
+</p>
+
+![Platform](https://img.shields.io/badge/platform-ios-blue.svg)
+[![CocoaPods](https://img.shields.io/badge/Pod-0.3.36-red.svg)](https://cocoapods.org/pods/Azot)
+[![Facebook](https://img.shields.io/badge/Facebook-Azot%20Ltd-blue.svg)](https://www.facebook.com/uxanalysis)
+
 Azot is a mobile analysis SDK that runs directly inside phones or tablets. This repository holds the framework for the iOS version of Azot written in Objective-C.
 
 ##Supported OS & SDK Versions
 
 * Supported build target - iOS 8.3
-* Earliest supported deployment target - iOS 9.2.1
+* Earliest supported deployment target - iOS 9.3.2
 * Earliest compatible deployment target - iOS 7.0
-* 
-**NOTE**: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility and may require tweaking or bug fixes to run correctly.
+
+**NOTE**: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility.
 
 
 ##Thread Safety
@@ -16,7 +23,13 @@ Azot uses threading internally to avoid blocking the UI, but none of the Azot ex
 
 ##Installation
 
-To install Azot into your app, drag the Azot.framework into your project.
+Use CocoaPods by adding this line to your podfile :
+
+    pod 'Azot'
+
+**Or**
+
+To install Azot manually into your app, drag the Azot.framework into your project.
 
 Add those native dependencies to your project:
 
@@ -34,14 +47,6 @@ Then add the compile flags following those steps:
 2. Select your project under the PROJECT heading in the Project Navigator, then select the Build Settings tab.
 3. Scroll down to the Other Linker Flags build setting under the Linking collection, or type "Other Linker Flags" into the search bar.
 4. Set the value of the Other Linker Flags build setting to $(OTHER_LDFLAGS) -ObjC.
-
-
-
-**Or**
-
-Use CocoaPods by adding this to your podfile :
-
-    pod 'Azot'
 
 
 To start Azot analysis add the following code in your appDelegate :
@@ -75,10 +80,9 @@ If you are running from Xcode do not stop the app, press the "home" button in or
 The confidentiality level of screenshots and vidéos have three levels:
 
 Confidentiality level   |   Hidden elements 
-------------------------|--------------------
-AZConfidentialityLow    |   Nothing 
-AZConfidentialityMedium |   UITextFields + AVCaptureVideoPreviewLayer
-AZConfidentialityHigh   |   AZConfidentialityMedium + UIImages + UILabels
+------------------------|-------------------- 
+AZConfidentialityMedium |   Keyboard + TextFields + Capture Video PreviewLayer
+AZConfidentialityHigh   |   AZConfidentialityMedium + Images + Labels
 
 The default confidentiality level is medium.
 
@@ -112,12 +116,16 @@ Stop a page analysis. Call it in your controller viewDidDisapear.
 
 Track events you care about in your app.
     
-####message:
+####feedback:
 
     + (void)feedback:(NSString*)message forCategory:(NSString*)category;
 
 This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
 It is the one used in our feedback feature.
+
+    + (void)showFeedbackView;
+
+Shows the Azot feedback page. This function can be used in a feedback button action.
 
 ####AZLog:
 
@@ -133,37 +141,49 @@ You can acces sdk parameters through your dashboard on http://board.azot.io
 ___
 
 ####Use feedback
-Activate or desactivate the "shake for feedback" functionality.
+Activate or desactivate the "shake for feedback" functionality. (Activated by default)
 
 ####Session recording
-Activate or desactivate session recording.
+Activate or desactivate session recording. (Activated by default)
 
 ####Location recording
-Activate or desactivate location tracking.
+Activate or desactivate location tracking. (Activated by default)
 
 ####Record on debug mode
-If activated only session from apps downloaded through the Appstore will be retrieved.
+If activated only session from apps downloaded through the Appstore will be retrieved. (Activated by default)
 
 ####Only upload on wifi
-If activated datas will only be sent when the user is connected to wifi.
+If activated datas will only be sent when the user is connected to wifi. (Desactivated by default)
 
 ####Use auto pages tracking
-If activated pages will be automatically tracked.
+If activated pages will be automatically tracked. (Activated by default)
 
 ####Use date range
-Allows you to set a date range in which the SDK will be on.
+Allows you to set a date range in which the SDK will be on. (Desactivated by default)
 
 ###Video Parameters
 ___
 
 ####Video recording
-Activate or desactivate the video.
+Activate or desactivate the video. (Desactivated by default)
 
 ####Only upload on wifi
-If activated videos will only be sent when the user is connected to wifi.
+If activated videos will only be sent when the user is connected to wifi. (Activated by default)
 
 ####Confidentiality
-Set the video confidentiality level.
+Set the video confidentiality level. (MEDIUM by default)
 
 ####Use date range
-Allows you to set a date range in which the Video will be on.
+Allows you to set a date range in which the Video will be on. (Desactivated by default)
+
+###Feedback Parameters
+___
+
+####Use feedback
+Activate or Desactivate the "Shake for feedback" gesture. (Activated by default)
+
+####Question for your users
+Define the question you want us to ask your users on the top of the feedback page.
+
+####Categories
+Define different feedback categories. (Max. 5)
