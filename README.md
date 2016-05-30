@@ -29,7 +29,7 @@ Use CocoaPods by adding this line to your podfile :
 
 **Or**
 
-Install Azot manually into your app, drag the Azot.framework into your project.
+Install Azot manually into your app by dragging the Azot.framework into your project.
 
 Add those native dependencies to your project:
 
@@ -50,7 +50,7 @@ Then add the compile flags following those steps:
 
 ##Start
 
-To start Azot analysis add the following code in your appDelegate :
+Add the following code to your appDelegate :
 
 #####Objective C
 
@@ -76,7 +76,7 @@ Import \<Azot/Azot.h\> in your bridging header.
 
 The SDK does not generate videos on simulator.
 
-If you are running from Xcode do not stop the app, press the "home" button in order for data to be uploaded.
+If you are running from Xcode do not stop the app, press the "home" button in order to upload datas.
 
 ##Confidentiality
 
