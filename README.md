@@ -29,7 +29,7 @@ Use CocoaPods by adding this line to your podfile :
 
 **Or**
 
-To install Azot manually into your app, drag the Azot.framework into your project.
+Install Azot manually into your app, drag the Azot.framework into your project.
 
 Add those native dependencies to your project:
 
@@ -48,6 +48,7 @@ Then add the compile flags following those steps:
 3. Scroll down to the Other Linker Flags build setting under the Linking collection, or type "Other Linker Flags" into the search bar.
 4. Set the value of the Other Linker Flags build setting to $(OTHER_LDFLAGS) -ObjC.
 
+##Start
 
 To start Azot analysis add the following code in your appDelegate :
 
@@ -68,6 +69,8 @@ Import \<Azot/Azot.h\> in your bridging header.
        Azot.start("AZOT_APP_TOKEN")
        return true
        }
+       
+  **NOTE**: To get your "AZOT_APP_TOKEN", register <a href="https://board.azot.io" target="_blank">here</a> and create an app.
     
 ##Important notes
 
@@ -135,7 +138,7 @@ This function prints and saves your logs, simply use AZLog instead of NSLog.
 
 ##Configuration
 
-You can acces sdk parameters through your dashboard on http://board.azot.io
+You can acces sdk parameters through your dashboard on https://board.azot.io
 
 ###General Parameters
 ___
