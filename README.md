@@ -163,6 +163,8 @@ Track events you care about in your app.
 This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
 It is the one used in our feedback feature.
 
+####show feedback:
+
   **objC**
   
     + (void)showFeedbackView;
