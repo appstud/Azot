@@ -8,6 +8,16 @@
 
 Azot is a mobile analysis SDK that runs directly inside phones or tablets. This repository holds the framework for the iOS version of Azot written in Objective-C.
 
+## Features
+
+- [x] User sessions videos
+- [x] Gesture analysis
+- [x] Embed feedback
+- [x] Crashs analysis
+- [x] Sessions analysis
+- [x] Heatmaps
+- [x] Remote settings
+
 ##Supported OS & SDK Versions
 
 * Supported build target - iOS 8.3
@@ -15,7 +25,6 @@ Azot is a mobile analysis SDK that runs directly inside phones or tablets. This 
 * Earliest compatible deployment target - iOS 7.0
 
 **NOTE**: 'Supported' means that the library has been tested with this version. 'Compatible' means that the library should work on this OS version (i.e. it doesn't rely on any unavailable SDK features) but is no longer being tested for compatibility.
-
 
 ##Thread Safety
 
@@ -91,42 +100,76 @@ The default confidentiality level is medium.
 
 ##Methods
 
-Azot has the following methods:
-
 ####start:
 
+  **objC**
+  
     + (void)start:(NSString*)azotAppToken;
+  
+  **swift**
+
+    static func start(azotAppToken:String)
 
 Start analysis in the app with video and medium confidentiality level. Call it in your app delegate.
 It is the only mandatory function that has to be used.
 
 ####startPage: 
 
+  **objC**
+
     + (void)startPage:(NSString *)pageId
+  
+  **swift**
+
+    static func startPage(pageId:String)
 
 Start analysis of a page. Call it in your controller viewDidAppear.
 Tips: Use this function to analyse a “page”, understood as what the user can see.
 
 ####stopPage: 
 
+  **objC**
+
     + (void)stopPage:(NSString *)pageId
+
+  **swift**
+
+    static func stopPage(pageId:String)
 
 Stop a page analysis. Call it in your controller viewDidDisapear.
 
 ####event: 
 
+  **objC**
+
     + (void)event:(NSString *)eventId
+  
+  **swift**
+
+    static func event(eventId:String)
 
 Track events you care about in your app.
     
 ####feedback:
 
+  **objC**
+
     + (void)feedback:(NSString*)message forCategory:(NSString*)category;
+  
+  **swift**
+
+    static func feedback(message:String, category:String)
 
 This function is used to collect user feedbacks. The feedbacks will be saved in the session report.
 It is the one used in our feedback feature.
 
+  **objC**
+  
     + (void)showFeedbackView;
+  
+  **swift**
+  
+    static func showFeedbackView()
 
 Shows the Azot feedback page. This function can be used in a feedback button action.
 
@@ -134,7 +177,7 @@ Shows the Azot feedback page. This function can be used in a feedback button act
 
     OBJC_EXTERN void AZLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
-This function prints and saves your logs, simply use AZLog instead of NSLog.
+This function prints and saves your logs, simply use AZLog instead of NSLog. (Only available with ObjectiveC)
 
 ##Configuration
 
