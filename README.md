@@ -5,6 +5,7 @@
 ![Platform](https://img.shields.io/badge/platform-ios-blue.svg)
 [![CocoaPods](https://img.shields.io/badge/Pod-0.3.36-red.svg)](https://cocoapods.org/pods/Azot)
 [![Facebook](https://img.shields.io/badge/Facebook-Azot%20Ltd-blue.svg)](https://www.facebook.com/uxanalysis)
+![Carthage](https://img.shields.io/badge/Carthage-compatible-green.svg)
 
 Azot is a mobile analysis SDK that runs directly inside phones or tablets. This repository holds the framework for the iOS version of Azot written in Objective-C.
 
